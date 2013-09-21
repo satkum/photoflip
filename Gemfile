@@ -6,11 +6,7 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-# Bootstrap gem
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-				:github => 'anjlab/bootstrap-rails',
-				:branch => '3.0.0'
-
+# Paperclip and AWS
 gem 'paperclip'
 gem 'aws-sdk'
 
