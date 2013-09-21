@@ -3,13 +3,16 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'pg'
+
 # Use sqlite3 as the database for Active Record
 group :development do
-  gem 'sqlite3'
+#  gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+ # gem 'pg', '0.15.1'
+  gem 'rails_12factor'
 end
 
 # Paperclip and AWS
