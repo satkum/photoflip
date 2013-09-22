@@ -1,12 +1,22 @@
 PhotoFlip::Application.routes.draw do
   get "photos/new"
   resources :photos
-  get "photo_flip/home"
-  get "photo_flip/help"
+  resources :users
+  root 'photo_flip#home'
+  match '/login', to: 'users#login', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  match '/help', to: 'photo_flip#help', via: 'get'
+  match '/home', to: 'photo_flip#home', via: 'get'
+  match '/', to: 'photo_flip#home', via: 'get'
+
+#  get "photo_flip/home"
+#  get "photo_flip/help"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root 'application#index'
+  
+  #root 'application#index'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
