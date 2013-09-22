@@ -1,6 +1,5 @@
 PhotoFlip::Application.routes.draw do
-  get "users/new"
-
+  resources :users
   root 'photo_flip#home'
   match '/login', to: 'users#login', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
