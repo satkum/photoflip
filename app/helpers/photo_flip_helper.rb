@@ -1,0 +1,2 @@
+module PhotoFlipHelper
+end
