@@ -1,4 +1,6 @@
 PhotoFlip::Application.routes.draw do
+  get "photos/new"
+  resources :photos
   get "photo_flip/home"
   get "photo_flip/help"
   # The priority is based upon order of creation: first created -> highest priority.

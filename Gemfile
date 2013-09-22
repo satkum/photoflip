@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
-#ruby '1.9.3'
+#ruby '2.0.0'
+ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -16,6 +16,9 @@ group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor'
 end
+
+#To use attr_accessible in model definitons
+gem 'protected_attributes'
 
 # Paperclip and AWS
 gem 'paperclip'
