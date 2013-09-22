@@ -2,6 +2,7 @@ PhotoFlip::Application.routes.draw do
   get "users/new"
 
   root 'photo_flip#home'
+  match '/signup', to: 'users#new', via: 'get'
   match '/help', to: 'photo_flip#help', via: 'get'
   match '/home', to: 'photo_flip#home', via: 'get'
   match '/', to: 'photo_flip#home', via: 'get'
