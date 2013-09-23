@@ -4,15 +4,31 @@
 
 	<h1>All photos</h1>
 
-	<ul class="thumbnails">
+	<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+	</div>
+
+	<div id="links">
+		<% @photos.each do |photo| %>
+			<%= link_to "",    photo.file.url %>
+		<% end %>
+	</div
+
+<!--	<ul class="thumbnails">
 		<% @photos.each do |photo| %>
 		  <li class="span4">
 		    <a href="#" class="thumbnail">
-		      <%= image_tag photo.file.url(:square) %>
+		      
 		    </a>
 		  </li>
    		<% end %>
-	</ul>
+	</ul> -->
 
 <% content_for :js do %>
 	<script src="gallery/js/blueimp-gallery.min.js"></script>
