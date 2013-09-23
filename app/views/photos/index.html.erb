@@ -16,12 +16,13 @@
 
 	<div id="links">
 		<% @photos.each do |photo| %>
-			<%= link_to "",    photo.file.url %>
+			<%= link_to "<%= image_tag photo.file.url(:thumb) %>",    photo.file.url %>
 		<% end %>
 	</div
 
 
 <% content_for :js do %>
+	<script src="gallery/js/bootstrap.min.js"></script>
 	<script src="gallery/js/blueimp-gallery.min.js"></script>
 	<script>
 	document.getElementById('links').onclick = function (event) {
