@@ -16,7 +16,7 @@
 
 	<div id="links">
 		<% @photos.each do |photo| %>
-			<%= link_to "sample image",    photo.file.url %>
+			<%= link_to image_tag @photo.file.url(:thumb),    photo.file.url %>
 		<% end %>
 	</div
 
